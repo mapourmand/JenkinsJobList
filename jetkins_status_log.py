@@ -14,7 +14,6 @@ J = Jenkins('http://localhost:8080', 'root', '123456')
 jobs = J.keys()
 
 for job in J.keys():
-    #J.get_job(job)
     if not J[job].is_enabled():
         status = 'disable'
     elif J[job].is_running():
